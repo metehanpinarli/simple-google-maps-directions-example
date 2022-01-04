@@ -26,8 +26,8 @@ class DirectionService {
     await directionsService.route(request, (DirectionsResult response, DirectionsStatus? status) async {
       if (status == DirectionsStatus.ok) {
         var steps = response.routes![0].legs![0].steps;
-        for (int z = 0; z < steps!.length; z++) {
-          var point = steps[z].polyline!.points.toString();
+        for (int index = 0; index < steps!.length; index++) {
+          var point = steps[index].polyline!.points.toString();
           polylineCoordinates.addAll(convertPolyline(point));
         }
       } else {
