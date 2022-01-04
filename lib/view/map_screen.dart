@@ -10,28 +10,28 @@ class MapView extends StatefulWidget {
 }
 
 class _MapViewState extends State<MapView> {
-
   final Set<Marker> _markers = <Marker>{};
   final Set<Polyline> _polylines = <Polyline>{};
 
   static const CameraPosition _initialCameraPosition = CameraPosition(
     target: LatLng(41.025662407888696, 28.974232958230843),
-    zoom: 17,
+    zoom: 16,
   );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: GoogleMap(
-      initialCameraPosition: _initialCameraPosition,
-      mapType: MapType.normal,
-      markers: _markers,
-      polylines:_polylines,
-      onTap: (position) async {
-        addMakers(position);
-        addPolyline(position);
-      },
-    ));
+      body: GoogleMap(
+        initialCameraPosition: _initialCameraPosition,
+        mapType: MapType.normal,
+        markers: _markers,
+        polylines: _polylines,
+        onTap: (position) async {
+          addMakers(position);
+          addPolyline(position);
+        },
+      ),
+    );
   }
 
   addMakers(LatLng position) {
@@ -42,9 +42,10 @@ class _MapViewState extends State<MapView> {
   }
 
   addPolyline(LatLng position) async {
-    Polyline polyline =await DirectionService().addPolyLine(_initialCameraPosition.target, position);
+    Polyline polyline = await DirectionService().addPolyLine(_initialCameraPosition.target, position);
     setState(() {
       _polylines.add(polyline);
     });
   }
+
 }

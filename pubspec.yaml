@@ -22,6 +22,8 @@ dependencies:
 
   google_directions_api: ^0.9.0
 
+  flutter_polyline_points: ^1.0.0
+
 
 
 
