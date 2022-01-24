@@ -1,16 +1,15 @@
-# simple_google_maps_directions
+# Simple Google Maps Directions Example
+#### Setup
 
-A new Flutter project.
+```
+-flutter clean
+-flutter pub get
+-flutter run
+```
 
-## Getting Started
+## About the app
+This project is a sample project made for the medium article.
+It explains how to use Google Directions API with Flutter.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots of the App
+![1_QHYwVEQwNdbgPnrtAKibwg](https://user-images.githubusercontent.com/56471014/150835663-bc03c09a-15c9-45d1-84aa-ab817277cba0.gif)
